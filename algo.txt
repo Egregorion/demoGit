@@ -1,1 +1,85 @@
 Ici, premier cours d'algorithmie
+
+Algo Baptiste (Des IF dans des IF)
+
+FONCTIONS_UTILISEES
+VARIABLES
+  tar_bleu EST_DU_TYPE CHAINE
+  tar_violet EST_DU_TYPE CHAINE
+  tar_jaune EST_DU_TYPE CHAINE
+  tar_orange EST_DU_TYPE CHAINE
+  refus EST_DU_TYPE CHAINE
+  User_age EST_DU_TYPE NOMBRE
+  User_duree EST_DU_TYPE NOMBRE
+  User_accident EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  LIRE User_age
+  LIRE User_duree
+  LIRE User_accident
+  SI (User_age < 25) ALORS
+    DEBUT_SI
+    SI (User_duree <= 2) ALORS
+      DEBUT_SI
+      SI (User_accident == 0) ALORS
+        DEBUT_SI
+        AFFICHER "tarif Orange"
+        FIN_SI
+        SINON
+          DEBUT_SINON
+          AFFICHER "refus d'assurance"
+          FIN_SINON
+      FIN_SI
+      SINON
+        DEBUT_SINON
+        SI (User_accident == 0) ALORS
+          DEBUT_SI
+          AFFICHER "tarif jaune"
+          FIN_SI
+        SI (User_accident == 1) ALORS
+          DEBUT_SI
+          AFFICHER "tarif orange"
+          FIN_SI
+        SI (User_accident > 1) ALORS
+          DEBUT_SI
+          AFFICHER "refus d'assurance"
+          FIN_SI
+        FIN_SINON
+    FIN_SI
+    SINON
+      DEBUT_SINON
+      SI (User_duree <= 2) ALORS
+        DEBUT_SI
+        SI (User_accident == 0) ALORS
+          DEBUT_SI
+          AFFICHER "tarif jaune"
+          FIN_SI
+        SI (User_accident == 1) ALORS
+          DEBUT_SI
+          AFFICHER "tarif orange"
+          FIN_SI
+        SI (User_accident > 1) ALORS
+          DEBUT_SI
+          AFFICHER "refus d'assurance"
+          FIN_SI
+        FIN_SI
+        SINON
+          DEBUT_SINON
+          SI (User_accident == 0) ALORS
+            DEBUT_SI
+            AFFICHER "tarif violet"
+            FIN_SI
+          SI (User_accident == 1) ALORS
+            DEBUT_SI
+            AFFICHER "tarif jaune"
+            FIN_SI
+          SI (User_accident == 2) ALORS
+            DEBUT_SI
+            AFFICHER "tarif orange"
+            FIN_SI
+          SI (User_accident > 2) ALORS
+            DEBUT_SI
+            AFFICHER "refus d'assurance"
+            FIN_SI
+          FIN_SINON
+      FIN_SINON
+FIN_ALGORITHME
