@@ -1,1 +1,55 @@
 Ici, premier cours d'algorithmie
+
+Algorithme Compteur (Maéva)
+
+VARIABLES
+age EST_DU_TYPE NOMBRE
+age_permis EST_DU_TYPE NOMBRE
+accident EST_DU_TYPE NOMBRE
+ancien EST_DU_TYPE NOMBRE
+count EST_DU_TYPE NOMBRE
+
+DEBUT_ALGORITHME
+count PREND_LA_VALEUR 0
+AFFICHER "Quel est votre age ?"
+LIRE age
+AFFICHER "Depuis combien d'année détenez vous le permis ?"
+LIRE age_permis
+AFFICHER "Combien d'accident avez vous eu ?"
+LIRE accident
+AFFICHER "Depuis combien de temps êtes vous assuré chez nous ?"
+LIRE ancien
+SI (age>25) ALORS
+DEBUT_SI
+	count PREND_LA_VALEUR count+1
+FIN_SI
+SI (age_permis>2) ALORS
+DEBUT_SI
+	count PREND_LA_VALEUR count+1
+FIN_SI
+count PREND_LA_VALEUR (count-accident)+1
+SI (ancien>5) ALORS
+DEBUT_SI
+count PREND_LA_VALEUR count+1
+FIN_SI
+SI (count<=0) ALORS
+DEBUT_SI
+	AFFICHER "Désolé, vous n'avez pas les conditions minimum requises pour être assuré chez nous"
+FIN_SI
+SI (count==1) ALORS
+DEBUT_SI
+	AFFICHER "Félicitation ! Vous bénéficiez du forfait Orange."
+FIN_SI
+SI (count==2) ALORS
+DEBUT_SI
+	AFFICHER "Félicitation ! Vous bénéficiez du forfait Jaune."
+FIN_SI
+SI (count==3) ALORS
+DEBUT_SI
+	AFFICHER "Félicitation ! Vous bénéficiez du forfait Violet."
+FIN_SI
+SI (count==4) ALORS
+DEBUT_SI
+	AFFICHER "Félicitation ! Vous bénéficiez du forfait Bleu."
+FIN_SI
+FIN_ALGORITHME
